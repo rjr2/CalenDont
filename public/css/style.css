@@ -1,0 +1,73 @@
+body {
+background-color: #1368aa;
+  text-align: center;
+  background-image: url(images/rain-drops-seamless-pattern-background-vector-203437511.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  max-height: 100%;
+  width: 100%;
+}
+
+.row {
+  align-items: center;
+}
+
+#sidebar-row {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#sidebar-links {
+  justify-content:center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+  #header {
+    font-family: 'Urbanist';
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #9dcee2;
+    margin: 20px;
+    border-radius: 75px;
+    border: 2px solid black;
+  }
+
+  #sidebar {
+    font-family: 'Urbanist';
+    background-color: #033270;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 75px;
+    border: 2px solid black;
+  }
+
+  #main {
+    font-family: 'Urbanist';
+    background-color: #4091c9; opacity: .6;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 75px;
+    border: 2px solid black;
+    border-style: double;
+  }
+
+  .logo {
+    padding: 20px
+  }
+
+  h1 {
+    font-size: 56pt;
+  }
+
+  h2 {
+      font-size: 22pt;
+  }
+
+
+  
