@@ -1,0 +1,84 @@
+body {
+background-color: #1368aa;
+  text-align: center;
+  background-image: url(/Users/ashleytate/Desktop/BootcampHomework/CalenDont/public/images/rain-drops-seamless-pattern-background-vector-20437511.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  max-height: 100%;
+  width: 100%;
+}
+
+.nav-link a {
+  color: #ffb703;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #fb8500;
+  font-weight: bold;
+}
+
+.row {
+  align-items: center;
+}
+
+#sidebar-row {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#sidebar-links {
+  justify-content:center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+  #header {
+    font-family: 'Urbanist';
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #9dcee2; 
+    margin: 20px;
+    border-radius: 50px;
+    box-shadow: 0 2px 3px 5px rgba(0,0,0,.6);
+    }
+  
+
+  #sidebar {
+    font-family: 'Urbanist';
+    background-color: #00296b;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 50px;
+    border: 2px solid black;
+    box-shadow: 0 1px 2px 3px rgba(0,0,0,.6);
+  }
+
+  #main {
+    font-family: 'Urbanist';
+    background-color: #fff6cc; opacity: .95; 
+    margin: 20px;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 2px 3px 5px rgba(0,0,0,.6);
+  }
+
+  .logo {
+    padding: 20px
+  }
+
+  h1 {
+    font-size: 56pt;
+  }
+
+  h2 {
+      font-size: 22pt;
+  }
+
+
+  

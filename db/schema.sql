@@ -1,4 +1,5 @@
 DROP DATABASE IF EXISTS calendont_db;
+
 CREATE DATABASE calendont_db;
 
 USE calendont_db;
@@ -18,3 +19,6 @@ CREATE TABLE events (
   cancelled BOOLEAN NOT NULL
   user_id INT NOT NULL 
 );
+
+
+
