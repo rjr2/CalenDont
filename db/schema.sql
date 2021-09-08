@@ -6,9 +6,9 @@ USE calendont_db;
 
 CREATE TABLE users (
   user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  first_name VARCHAR(30) NOT NULL,
-  last_name VARCHAR(30) NOT NULL,
-  enrolled BOOLEAN NOT NULL
+  username VARCHAR(30) NOT NULL,
+  email VARCHAR(30) NOT NULL,
+  user_password VARCHAR(12) NOT NULL
 );
 
 CREATE TABLE events (
@@ -16,7 +16,7 @@ CREATE TABLE events (
   title VARCHAR(30) NOT NULL,
   schedule DATE NOT NULL, 
   details VARCHAR(30) NOT NULL,
-  cancelled BOOLEAN NOT NULL
+  cancelled BOOLEAN NOT NULL,
   user_id INT NOT NULL 
 );
 
