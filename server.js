@@ -9,7 +9,7 @@ const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
 const sess = {
-    secret: 'Super secret secret',
+    secret: 'maybe?',
     cookie: {},
     resave: false,
     saveUninitialized: true,
