@@ -1,3 +1,5 @@
 node_modules
 .env
 .ds_store
+seeds.js
+seeds.sql
