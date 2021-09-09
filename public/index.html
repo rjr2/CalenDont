@@ -37,49 +37,67 @@
             <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-around">
               <li class="nav-item">
                 <a class="nav-link pl-0 text-nowrap" href="#"> <span class="font-weight-bold">Link</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link pl-0 text-nowrap" href="#"> <span class="font-weight-bold">Link</span></a>
-          </li>              <li class="nav-item">
-            <a class="nav-link pl-0 text-nowrap" href="#"> <span class="font-weight-bold">Link</span></a>
-        </li>              <li class="nav-item">
-          <a class="nav-link pl-0 text-nowrap" href="#"> <span class="font-weight-bold">Link</span></a>
-      </li>
+              </li>
+              <li class="nav-item">
+                <button id="logout" class="btn-no-style">Logout</button>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-0 text-nowrap" href="#"> <span class="font-weight-bold">Link</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-0 text-nowrap" href="#"> <span class="font-weight-bold">Link</span></a>
+              </li>
             </ul>
           </div>
         </nav>
       </aside>
       <main class="col offset-md-2 bg-faded py-3" style="text-align: center;" id="main">
-        <h2>Main</h2>
-        <p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch.
-          Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote
-          bag. Tote bag cronut semiotics,
-          raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo.
-          Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth
-          chillwave meditation.
-          Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY
-          90's blog.</p>
-
-        <p>Ethical Kickstarter PBR asymmetrical lo-fi. Dreamcatcher street art Carles, stumptown gluten-free Kickstarter
-          artisan Wes Anderson wolf pug. Godard sustainable you probably haven't heard of them, vegan farm-to-table
-          Williamsburg slow-carb
-          readymade disrupt deep v. Meggings seitan Wes Anderson semiotics, cliche American Apparel whatever. Helvetica
-          cray plaid, vegan brunch Banksy leggings +1 direct trade. Wayfarers codeply PBR selfies. Banh mi McSweeney's
-          Shoreditch selfies,
-          forage fingerstache food truck occupy YOLO Pitchfork fixie iPhone fanny pack art party Portland.</p>
-
-        <p>Ethical Kickstarter PBR asymmetrical lo-fi. Dreamcatcher street art Carles, stumptown gluten-free Kickstarter
-          artisan Wes Anderson wolf pug. Godard sustainable you probably haven't heard of them, vegan farm-to-table
-          Williamsburg slow-carb
-          readymade disrupt deep v. Meggings seitan Wes Anderson semiotics, cliche American Apparel whatever. Helvetica
-          cray plaid, vegan brunch Banksy leggings +1 direct trade. Wayfarers codeply PBR selfies. Banh mi McSweeney's
-          Shoreditch selfies,
-          forage fingerstache food truck occupy YOLO Pitchfork fixie iPhone fanny pack art party Portland.</p>
+        <h2>Welcome to CalenDon't, the app that lets you flake without fear!</h2>
+        <p>Have you ever made plans, but when the time came, you just weren't feeling it? Did you wish you could cancel, but didn't want to be rude? If so, this is the app for you!</p>
+        <div class="row justify-space-between-md" id="login-signup">
+          <div class="login-card">
+            <h2 class="page-title">Login</h2>
+            <form class="form login-form">
+              <div class="form-group">
+                <label for="email-login">Email:</label>
+                <input class="form-input" type="text" id="email-login" />
+              </div>
+              <div class="form-group">
+                <label for="password-login">Password:</label>
+                <input class="form-input" type="password" id="password-login" />
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary" type="submit">login</button>
+              </div>
+            </form>
+          </div>
+          <div class="login-card">
+            <h2 class="page-title">Signup</h2>
+            <form class="form signup-form">
+              <div class="form-group">
+                <label for="username-signup">Username:</label>
+                <input class="form-input" type="text" id="username-signup" />
+              </div>
+              <div class="form-group">
+                <label for="email-signup">Email:</label>
+                <input class="form-input" type="text" id="email-signup" />
+              </div>
+              <div class="form-group">
+                <label for="password-signup">Password:</label>
+                <input class="form-input" type="password" id="password-signup" />
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary" type="submit">signup</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </main>
     </div>
   </div>
 
+ 
 
-<!-- <div class="col-8" style="text-align: justify;" id="main"> -->
+    <script src="./js/login.js"></script>
 
 </body>

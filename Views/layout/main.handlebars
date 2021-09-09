@@ -3,27 +3,63 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CalenDON'T</title>
-  <link rel="stylesheet" type="text/css" href="/css/jass.css">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <title>CalenDon't</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Urbanist&display=swap" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <h1>CalenDON'T</h1>
-  </header>
-  <nav>
-    <a href="/">Home</a>
-  </nav>
-  <main>
-    <aside>
-      <h2>The Anti-Social Social Planner</h2>
-    </aside>
-    <div class="gallery">
-      {{{body}}}
+  <div class="wrapper">
+    <div class="container-fluid h-100" id="header">
+      <div class="row">
+        <div class="col">
+          <img class="logo" src="./images/skeletor.png"
+            alt="Skeletor lounging on a couch in a snuggie with a glass of wine and a cat snuggled at his feet">
+        </div>
+        <div class="col">
+          <h1>CalenDon't</h1>
+          <h2>The Antisocial Social Planner</h2>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="container-fluid h-100">
+    <div class="row min-vh-100 align-items-start">
+      <aside class="col-12 col-md-2 p-0 " id="sidebar">
+        <nav class="navbar navbar-expand navbar-dark flex-md-column flex-row align-items-center py-2">
+          <div class="collapse navbar-collapse align-items-start">
+            <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-around">
+              <li class="nav-item">
+                <a class="nav-link pl-0 text-nowrap" href="/"> <span class="font-weight-bold">Home</span></a>
+              </li>
+              <li class="nav-item">
+                {{#if loggedIn}}
+                <button id="logout" class="btn-no-style">Logout</button>
+                {{else}}
+                <a class="nav-link pl-0 text-nowrap" href="/login"> <span class="font-weight-bold">Login</span></a>
+                {{/if}}
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-0 text-nowrap" href="/about"> <span class="font-weight-bold">About CalenDon't</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pl-0 text-nowrap" href="/contact"> <span class="font-weight-bold">Contact Us</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+
+  <main class="col offset-md-2 bg-faded py-3" style="text-align: center;" id="main">
+    {{{body}}}
   </main>
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>
