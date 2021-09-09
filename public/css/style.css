@@ -76,7 +76,7 @@ background-color: #1368aa;
 
   #sidebar {
     font-family: 'Urbanist';
-    background-color: #00296b;
+    background-color: #434b9b;
     margin: 20px;
     padding: 20px;
     border-radius: 50px;
@@ -86,7 +86,7 @@ background-color: #1368aa;
 
   #main {
     font-family: 'Urbanist';
-    background-color: #fff6cc; opacity: .95; 
+    background-color: #cae6ee; opacity: .95; 
     margin: 20px;
     padding: 20px;
     border-radius: 50px;
@@ -105,5 +105,7 @@ background-color: #1368aa;
       font-size: 22pt;
   }
 
-
+#login-form {
+  justify-content: left;
+}
   
