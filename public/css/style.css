@@ -1,7 +1,7 @@
 body {
 background-color: #1368aa;
   text-align: center;
-  background-image: url(/Users/ashleytate/Desktop/BootcampHomework/CalenDont/public/images/rain-drops-seamless-pattern-background-vector-20437511.png);
+  background-image: url(rain-drops-seamless-pattern-background-vector-20437511.png);
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
@@ -21,6 +21,31 @@ background-color: #1368aa;
 
 .row {
   align-items: center;
+  justify-content: space-around;
+}
+
+.login-signup {
+  justify-content: space-around;
+  align-items:flex-start;
+}
+
+.login-card {
+  margin: 20px;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 5px;
+  border-radius: 50px;
+  box-shadow: 0 2px 3px 5px rgba(0,0,0,.6);
+  background-color: #9dcee2;
+  color: black;
+}
+
+.page-title {
+  justify-content: center
+}
+
+.form-group {
+  justify-content: start;
 }
 
 #sidebar-row {

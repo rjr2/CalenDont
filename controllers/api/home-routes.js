@@ -1,7 +1,10 @@
 const router = require('express').Router();
-const { UserID, Events } = require('../models');
 
-router.get('/', async (req, res) => {
+const { UserID, Events } = require('../models');
+const withAuth = require('../utils/auth')
+
+router.get('/', withAuth, async (req, res) => {
+
   try {
     const dbEvents = await Events.findAll({
       include: [
