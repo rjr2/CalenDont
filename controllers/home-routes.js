@@ -6,18 +6,18 @@ const withAuth = require('../utils/auth')
 router.get('/', withAuth, async (req, res) => {
 
   try {
-    const dbEvents = await Events.findAll({
-      include: [
-        {
-          model: Events,
-          attributes: ['date', 'time', 'title'],
-        },
-      ],
-    });
+  //   const dbEvents = await Events.findAll({
+  //     include: [
+  //       {
+  //         model: Events,
+  //         attributes: ['date', 'time', 'title'],
+  //       },
+  //     ],
+  // });
 
-    const events = dbEvents.map((event) =>
-      event.get({ plain: true })
-    );
+  //  const events = dbEvents.map((event) =>
+  //     event.get({ plain: true })
+  //  );
 
     res.render('homepage', {
       Events,
