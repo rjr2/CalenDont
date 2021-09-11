@@ -5,11 +5,11 @@ function toggleEventDisplay() {
 
     if (displaySetting == 'block') {
       myEvents.style.display = 'none';
-      eventDisplayButton.innerHTML = 'View Your Plans';
+      eventDisplayButton.innerHTML = 'View Your Events';
     }
     else {
       myEvents.style.display = 'block';
-      eventDisplayButton.innerHTML = 'Hide Your Plans';
+      eventDisplayButton.innerHTML = 'Hide Your Events';
     }
   }
 
@@ -26,4 +26,10 @@ function toggleEventDisplay() {
       myForm.style.display = 'block';
       formDisplayButton.innerHTML = 'Nevermind!';
     }
+  }
+
+  function clearEventInput(){
+    document.getElementById('addEventName').value = '';
+    document.getElementById('addEventParticipant').value = '';
+    document.getElementById('selectDateTime').value = '';
   }
