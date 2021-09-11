@@ -2,11 +2,7 @@
 
           <h2>Welcome to the app that lets you flake without fear!</h2>
 
-          <div class="row">
-            <div class="col-sm-4 view-add-buttons">
-            <button onclick="toggleEventDisplay()" id="event-display-button" class="btn btn-primary btn-lg btn-block">View Upcoming Events</button>
-            </div>
-          </div>
+
           
 
           <div class="row" id="event-cards">
@@ -44,11 +40,13 @@
             </div>
           </div>
 
-          <div class="row">
+                    <div class="row">
             <div class="col-sm-4 view-add-buttons">
-              <button onclick="toggleEventForm()" id="form-display-button" class="btn btn-primary btn-lg btn-block">Add New Event</button>
+            <button onclick="toggleEventDisplay()" id="event-display-button" class="btn btn-primary btn-lg btn-block">View Upcoming Events</button>
             </div>
           </div>
+
+          
 
 
 
@@ -59,18 +57,18 @@
               <form>
                 <div class="form-group">
                   <label for="addEventName">What is your event called?</label>
-                  <input type="text" class="form-control" id="addEventName" aria-describedby="emailHelp"
+                  <input type="text" class="form-control" id="addEventName"
                     placeholder="Enter event name">
                 </div>
                 <div class="form-group">
                   <label for="addEventParticipant">Who will be participating?</label>
-                  <input type="text" class="form-control" id="addEventparticipant"
+                  <input type="text" class="form-control" id="addEventParticipant"
                     placeholder="Enter participant username">
                 </div>
                 <div class="form-group">
                   <label for="addEventDate">What is the date and time of your event?</label>
                   <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
+                    <input type='text' class="form-control" id="addDateTime"/>
                     <span class="input-group-addon">
                       <span class="glyphicon glyphicon-calendar"></span>
                     </span>
@@ -82,7 +80,11 @@
           </div>
 
 
-
+<div class="row">
+            <div class="col-sm-4 view-add-buttons">
+              <button onclick="toggleEventForm(); "document.getElementById('addEventName', 'addEventParticipant').value = ''"" id="form-display-button" class="btn btn-primary btn-lg btn-block">Add New Event</button>
+            </div>
+          </div>
 
 
 

@@ -29,7 +29,7 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-// GET one gallery
+
 router.get('/event/:id', async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
   if (!req.session.loggedIn) {
