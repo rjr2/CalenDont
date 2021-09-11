@@ -67,7 +67,8 @@ background-color: #1368aa;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #9dcee2; 
+    background-color: #90cbdb; 
+    opacity: .95;
     margin: 20px;
     border-radius: 50px;
     box-shadow: 0 2px 3px 5px rgba(0,0,0,.6);
@@ -76,7 +77,8 @@ background-color: #1368aa;
 
   #sidebar {
     font-family: 'Urbanist';
-    background-color: #00296b;
+    background-color: #4a4085;
+    opacity: .95;
     margin: 20px;
     padding: 20px;
     border-radius: 50px;
@@ -86,7 +88,7 @@ background-color: #1368aa;
 
   #main {
     font-family: 'Urbanist';
-    background-color: #fff6cc; opacity: .95; 
+    background-color: #CAE6EE; opacity: .95; 
     margin: 20px;
     padding: 20px;
     border-radius: 50px;
@@ -105,5 +107,30 @@ background-color: #1368aa;
       font-size: 22pt;
   }
 
+#login-form {
+  justify-content: left;
+}
 
+.card {
+  border-radius: 50px;
+  margin: 20px;
+  box-shadow: 0 1px 1px 1px rgba(0,0,0,.6);
+}
   
+#event-form {
+  background-color: #90cbdb;
+  opacity: .95;
+  margin: 40px;
+  padding: 20px;
+  border-radius: 50px;
+  box-shadow: 0 2px 3px 5px rgba(0,0,0,.6);
+  display: none;
+}
+
+#event-cards {
+  display: none;
+}
+
+.view-add-buttons{
+  margin: 20px;
+}

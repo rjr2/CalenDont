@@ -9,97 +9,157 @@
   <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Urbanist&display=swap" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
 </head>
 
-
 <body>
-  <div class="wrapper">
-    <div class="container-fluid h-100" id="header">
-      <div class="row">
-        <div class="col">
-          <img class="logo" src="./images/skeletor.png"
-            alt="Skeletor lounging on a couch in a snuggie with a glass of wine and a cat snuggled at his feet">
-        </div>
-        <div class="col">
-          <h1>CalenDon't</h1>
-          <h2>The Antisocial Social Planner</h2>
+  </head>
+
+
+  <body>
+    <div class="wrapper">
+      <div class="container-fluid h-100" id="header">
+        <div class="row">
+          <div class="col">
+            <img class="logo" src="./images/skeletor.png"
+              alt="Skeletor lounging on a couch in a snuggie with a glass of wine and a cat snuggled at his feet">
+          </div>
+          <div class="col">
+            <h1>CalenDon't</h1>
+            <h2>The Antisocial Social Planner</h2>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
 
-  <div class="container-fluid h-100">
-    <div class="row min-vh-100 align-items-start">
-      <aside class="col-12 col-md-2 p-0 " id="sidebar">
-        <nav class="navbar navbar-expand navbar-dark flex-md-column flex-row align-items-center py-2">
-          <div class="collapse navbar-collapse align-items-start">
-            <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-around">
-              <li class="nav-item">
-                <a class="nav-link pl-0 text-nowrap" href="#"> <span class="font-weight-bold">Link</span></a>
-              </li>
-              <li class="nav-item">
-                <button id="logout" class="btn-no-style">Logout</button>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link pl-0 text-nowrap" href="#"> <span class="font-weight-bold">Link</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link pl-0 text-nowrap" href="#"> <span class="font-weight-bold">Link</span></a>
-              </li>
-            </ul>
+    <div class="container-fluid h-100">
+      <div class="row min-vh-100 align-items-start">
+        <aside class="col-12 col-md-2 p-0 " id="sidebar">
+          <nav class="navbar navbar-expand navbar-dark flex-md-column flex-row align-items-center py-2">
+            <div class="collapse navbar-collapse align-items-start">
+              <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-around">
+                <li class="nav-item">
+                  <a class="nav-link pl-0 text-nowrap" href="#"> <span class="font-weight-bold">Link</span></a>
+                </li>
+                <li class="nav-item">
+                  <button id="logout" class="btn btn-light">Logout</button>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pl-0 text-nowrap" href="#"> <span class="font-weight-bold">Link</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pl-0 text-nowrap" href="#"> <span class="font-weight-bold">Link</span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </aside>
+        <main class="col offset-md-2 bg-faded py-3" style="text-align: center;" id="main">
+
+          <h2>Welcome to the app that lets you flake without fear!</h2>
+
+          <div class="row">
+            <div class="col-sm-4 view-add-buttons">
+            <button onclick="toggleEventDisplay()" id="event-display-button" class="btn btn-primary btn-lg btn-block">View Upcoming Events</button>
+            </div>
           </div>
-        </nav>
-      </aside>
-      <main class="col offset-md-2 bg-faded py-3" style="text-align: center;" id="main">
+          
 
-        <h2>Welcome to CalenDon't, the app that lets you flake without fear!</h2>
-        <p>Have you ever made plans, but when the time came, you just weren't feeling it? Did you wish you could cancel, but didn't want to be rude? If so, this is the app for you!</p>
-        <div class="row justify-space-between-md" id="login-signup">
-          <div class="login-card">
-            <h2 class="page-title">Login</h2>
-            <form class="form login-form">
-              <div class="form-group">
-                <label for="email-login">Email:</label>
-                <input class="form-input" type="text" id="email-login" />
+          <div class="row" id="event-cards">
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Event Title</h4>
+                  <p class="participants">Participants</p>
+                  <h5 class="status">Status</h5>
+                  <a href="#" class="btn btn-primary" id="cancel-button">Not feeling it?</a>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="password-login">Password:</label>
-                <input class="form-input" type="password" id="password-login" />
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Event Title</h4>
+                  <p class="participants">Participants</p>
+                  <h5 class="status">Status</h5>
+                  <a href="#" class="btn btn-primary" id="cancel-button">Not feeling it?</a>
+                </div>
               </div>
-              <div class="form-group">
-                <button class="btn btn-primary" type="submit">login</button>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Event Title</h4>
+                  <p class="participants">Participants</p>
+                  <h5 class="status">Status</h5>
+                  <a href="#" class="btn btn-primary" id="cancel-button">Not feeling it?</a>
+                </div>
               </div>
-            </form>
+            </div>
           </div>
-          <div class="login-card">
-            <h2 class="page-title">Signup</h2>
-            <form class="form signup-form">
-              <div class="form-group">
-                <label for="username-signup">Username:</label>
-                <input class="form-input" type="text" id="username-signup" />
-              </div>
-              <div class="form-group">
-                <label for="email-signup">Email:</label>
-                <input class="form-input" type="text" id="email-signup" />
-              </div>
-              <div class="form-group">
-                <label for="password-signup">Password:</label>
-                <input class="form-input" type="password" id="password-signup" />
-              </div>
-              <div class="form-group">
-                <button class="btn btn-primary" type="submit">signup</button>
-              </div>
-            </form>
+
+          <div class="row">
+            <div class="col-sm-4 view-add-buttons">
+              <button onclick="toggleEventForm()" id="form-display-button" class="btn btn-primary btn-lg btn-block">Add New Event</button>
+            </div>
           </div>
-        </div>
 
-      </main>
-    </div>
-  </div>
 
- 
 
-    <script src="./js/login.js"></script>
+          
 
-</body>
+          <div class="row">
+            <div class="col-sm-6" id="event-form">
+              <form>
+                <div class="form-group">
+                  <label for="addEventName">What is your event called?</label>
+                  <input type="text" class="form-control" id="addEventName" aria-describedby="emailHelp"
+                    placeholder="Enter event name">
+                </div>
+                <div class="form-group">
+                  <label for="addEventParticipant">Who will be participating?</label>
+                  <input type="text" class="form-control" id="addEventparticipant"
+                    placeholder="Enter participant username">
+                </div>
+                <div class="form-group">
+                  <label for="addEventDate">What is the date and time of your event?</label>
+                  <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Add Event</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+
+
+
+
+
+
+          <script>
+            $(function () {
+              $('#datetimepicker1').datetimepicker();
+            });
+          </script>
+        </main>
+        <script src="./js/script.js"></script>
+  </body>
+
+</html>
