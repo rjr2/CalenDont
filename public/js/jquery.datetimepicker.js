@@ -1972,7 +1972,7 @@ var datetimepickerFactory = function ($) {
 							.trigger('generate.xdsoft');
 					}, 10);
 					event.stopPropagation();
-				})
+				}
 				.on('afterOpen.xdsoft', function () {
 					if (options.timepicker) {
 						var classType, pheight, height, top;
@@ -2701,7 +2701,7 @@ var datetimepickerFactory = function ($) {
 		this.desc = desc;
 		this.style = style;
 	}
-};
+;
 ;(function (factory) {
 	if ( typeof define === 'function' && define.amd ) {
 		// AMD. Register as an anonymous module.
