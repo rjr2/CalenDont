@@ -1,10 +1,9 @@
 const router = require('express').Router();
-//const { User } = require('../../models');
-const { Events } =require('../../models')
+const { Events } =require('../../models');
 
 
 //CREATE new event
-router.post('/', async (req, res) => {
+router.post('/event', async (req, res) => {
     try {
       const dbEventData = await Events.create({
         Eventname: req.body.Eventname,

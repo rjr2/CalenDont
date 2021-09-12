@@ -33,7 +33,7 @@ Events.init({
   timestamps: false,
   freezeTableName: true,
   underscored: true,
-  modelName: "event",
+  modelName: "events",
 });
 
 module.exports = Events;
