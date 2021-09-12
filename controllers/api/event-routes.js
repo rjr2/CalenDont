@@ -8,7 +8,7 @@ router.post('/', async (req, res) => {
     try {
       const dbEventData = await Events.create({
         Eventname: req.body.Eventname,
-        username: req.body.username,
+        guest: req.body.guest,
         schedule: req.body.schedule,
       });
   
