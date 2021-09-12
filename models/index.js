@@ -1,5 +1,5 @@
 const User = require('./User');
-//const Events = require('./events')
+const Events = require('./event')
 
 // User.hasMany(Events, {
 //     foreignKey: 'user_id',
@@ -10,4 +10,4 @@ const User = require('./User');
 // })
 
 module.exports = { User } 
-//module.exports = { Events };
+module.exports = { Events };
