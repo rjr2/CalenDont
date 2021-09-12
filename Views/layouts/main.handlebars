@@ -58,18 +58,19 @@
               <li class="nav-item">
                 <a class="nav-link pl-0 text-nowrap" href="/"> <span class="font-weight-bold">Home</span></a>
               </li>
-              <li class="nav-item">
-                {{#if loggedIn}}
-                <button id="logout" href="/logout" class="btn-no-style">Logout</button>
-                {{else}}
-                <button id="login" href="/login" class="btn-no-style">Login</button>
-                {{/if}}
-              </li>
+
               <li class="nav-item">
                 <a class="nav-link pl-0 text-nowrap" href="/about"> <span class="font-weight-bold">About CalenDon't</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link pl-0 text-nowrap" href="/contact"> <span class="font-weight-bold">Contact Us</span></a>
+              </li>
+                            <li class="nav-item">
+                {{#if loggedIn}}
+                <button id="logout" href="/logout" class="btn btn-light">Logout</button>
+                {{else}}
+                <button id="login" href="/login" class="btn btn-light">Login</button>
+                {{/if}}
               </li>
             </ul>
           </div>
@@ -77,6 +78,7 @@
       </aside>
 
   <main class="col offset-md-2 bg-faded py-3" style="text-align: center;" id="main">
+    <h2>Welcome to the app that lets you flake without fear!</h2>
     {{{body}}}
   </main>
   {{#if loggedIn}}
