@@ -1,11 +1,13 @@
 const addEventHandler = async (event) => {
+    console.log("why tho?")
     event.preventDefault();
   
     const guest = document.querySelector('#addEventParticipant').value.trim();
     const Eventname = document.querySelector('#addEventName').value.trim();
     const schedule = document.querySelector('#addDateTime').value.trim();
   
-      const response = await fetch('/api/events', {
+    if (guest && Eventname && schedule) { 
+    const response = await fetch('/api/event', {
         method: 'POST',
         body: JSON.stringify({ guest, Eventname, schedule }),
         headers: { 'Content-Type': 'application/json' },
@@ -18,11 +20,10 @@ const addEventHandler = async (event) => {
         alert('Failed to add event.');
       }
     }
+}
   
-  
-  document
-    .querySelector('.add-event-button')
-    .addEventListener('submit', addEventHandler);
+document
+  .querySelector('.event-form')
+  .addEventListener('submit', addEventHandler);
   
 
-  
