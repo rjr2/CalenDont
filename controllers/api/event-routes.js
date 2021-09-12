@@ -3,7 +3,7 @@ const { Events } =require('../../models');
 
 
 //CREATE new event
-router.post('/event', async (req, res) => {
+router.post('/api/event', async (req, res) => {
     try {
       const dbEventData = await Events.create({
         Eventname: req.body.Eventname,
