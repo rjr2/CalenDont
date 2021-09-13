@@ -1,14 +1,14 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Events extends Model {}
+class Plans extends Model {}
 
-Events.init({
+Plans.init({
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-  Eventname: {
+  PlanName: {
     type: DataTypes.STRING,
     allowNull: false,
   },
@@ -33,7 +33,7 @@ Events.init({
   timestamps: false,
   freezeTableName: true,
   underscored: true,
-  modelName: "events",
+  modelName: "plans",
 });
 
-module.exports = Events;
+module.exports = Plans;

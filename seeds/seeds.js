@@ -1,5 +1,5 @@
 //change to make sense for our project
-// //do we want to seed some events, user profiles?
+// //do we want to seed some plans, user profiles?
 
 // const sequelize = require('../config/connection');
 // const seedGallery = require('./galleryData');
