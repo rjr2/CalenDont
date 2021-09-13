@@ -1,26 +1,26 @@
 const router = require('express').Router();
 
-const { UserID, Events } = require('../models');
+const { UserID, Plans } = require('../models');
 const withAuth = require('../utils/auth')
 
 router.get('/', withAuth, async (req, res) => {
 
   try {
-  //   const dbEvents = await Events.findAll({
+  //   const dbPlans = await Plans.findAll({
   //     include: [
   //       {
-  //         model: Events,
+  //         model: Plans,
   //         attributes: ['date', 'time', 'title'],
   //       },
   //     ],
   // });
 
-  //  const events = dbEvents.map((event) =>
-  //     event.get({ plain: true })
+  //  const plans = dbPlans.map((plan) =>
+  //     plan.get({ plain: true })
   //  );
 
     res.render('homepage', {
-      Events,
+      Plans,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -35,17 +35,17 @@ router.get('/about', (res) => {
 })
 
 
-router.get('/event/:id', async (req, res) => {
+router.get('/plan/:id', async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
   if (!req.session.loggedIn) {
     res.redirect('/login');
   } else {
     // If the user is logged in, allow them to view the gallery
     try {
-      const dbEvents = await events.findByPk(req.params.id, {
+      const dbPlans = await plans.findByPk(req.params.id, {
         include: [
           {
-            model: Events,
+            model: Plans,
             attributes: [
               'id',
               'title',
@@ -58,8 +58,8 @@ router.get('/event/:id', async (req, res) => {
           },
         ],
       });
-      const event = dbEvents.get({ plain: true });
-      res.render('event', { event, loggedIn: req.session.loggedIn });
+      const plan = dbPlans.get({ plain: true });
+      res.render('plan', { plan, loggedIn: req.session.loggedIn });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);

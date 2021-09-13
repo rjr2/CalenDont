@@ -117,7 +117,7 @@ background-color: #1368aa;
   box-shadow: 0 1px 1px 1px rgba(0,0,0,.6);
 }
   
-#event-form {
+#plan-form {
   background-color: #90cbdb;
   opacity: .95;
   margin: 40px;
@@ -127,7 +127,7 @@ background-color: #1368aa;
   display: none;
 }
 
-#event-cards {
+#plan-cards {
   display: none;
 }
 

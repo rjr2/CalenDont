@@ -5,11 +5,11 @@
 
           
 
-          <div class="row" id="event-cards">
+          <div class="row" id="plan-cards">
             <div class="col-sm-4">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Event Title</h4>
+                  <h4 class="card-title">Plan Title</h4>
                   <p class="participants">Participants</p>
                   <h5 class="status">Status</h5>
                   <a href="#" class="btn btn-primary" id="cancel-button">Not feeling it?</a>
@@ -20,7 +20,7 @@
             <div class="col-sm-4">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Event Title</h4>
+                  <h4 class="card-title">Plan Title</h4>
                   <p class="participants">Participants</p>
                   <h5 class="status">Status</h5>
                   <a href="#" class="btn btn-primary" id="cancel-button">Not feeling it?</a>
@@ -31,7 +31,7 @@
             <div class="col-sm-4">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Event Title</h4>
+                  <h4 class="card-title">Plan Title</h4>
                   <p class="participants">Participants</p>
                   <h5 class="status">Status</h5>
                   <a href="#" class="btn btn-primary" id="cancel-button">Not feeling it?</a>
@@ -42,7 +42,7 @@
 
                     <div class="row">
             <div class="col-sm-4 view-add-buttons">
-            <button onclick="toggleEventDisplay()" id="event-display-button" class="btn btn-primary btn-lg btn-block">View Upcoming Events</button>
+            <button onclick="togglePlanDisplay()" id="plan-display-button" class="btn btn-primary btn-lg btn-block">View Upcoming Plans</button>
             </div>
           </div>
 
@@ -54,26 +54,26 @@
 
           <div class="row">
             <div class="col-sm-6">
-              <form class="form event-form">
+              <form class="form plan-form">
                 <div class="form-group">
-                  <label for="addEventName">What is your event called?</label>
-                  <input type="text" class="form-control" id="addEventName"
-                    placeholder="Enter event name">
+                  <label for="addPlanName">What is your plan called?</label>
+                  <input type="text" class="form-control" id="addPlanName"
+                    placeholder="Enter plan name">
                 </div>
                 <div class="form-group">
-                  <label for="addEventParticipant">Who will be participating?</label>
-                  <input type="text" class="form-control" id="addEventParticipant"
+                  <label for="addPlanParticipant">Who will be participating?</label>
+                  <input type="text" class="form-control" id="addPlanParticipant"
                     placeholder="Enter participant username">
                 </div>
                 <div class="form-group">
-                  <label for="addEventDate">What is the date and time of your event?</label>
+                  <label for="addPlanDate">What is the date and time of your plan?</label>
                   <div class='input-group date' id='datetimepicker1'>
                     <input type='text' class="form-control" id="addDateTime"/>
                     <span class="input-group-addon">
                       <span class="glyphicon glyphicon-calendar"></span>
                     </span>
                   </div>
-                  <button type="submit" class="btn btn-primary">Add Event</button>
+                  <button type="submit" class="btn btn-primary">Add Plan</button>
                 </div>
               </form>
             </div>
@@ -82,7 +82,7 @@
 
 <div class="row">
             <div class="col-sm-4 view-add-buttons">
-              <button onclick="toggleEventForm(); "document.getElementById('addEventName', 'addEventParticipant').value = ''"" id="form-display-button" class="btn btn-primary btn-lg btn-block">Add New Event</button>
+              <button onclick="togglePlanForm(); "document.getElementById('addPlanName', 'addPlanParticipant').value = ''"" id="form-display-button" class="btn btn-primary btn-lg btn-block">Add New Plan</button>
             </div>
           </div>
 
@@ -95,4 +95,4 @@
             });
           </script>
         {{!-- <script src="./js/script.js"></script> --}}
-        <script src="./js/addevent.js"></script>
+        <script src="./js/addplan.js"></script>
