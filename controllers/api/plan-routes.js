@@ -3,7 +3,7 @@ const { Plan } =require('../../models');
 
 
 //CREATE new plan
-router.post('/api/plan', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
       const dbPlanData = await Plan.create({
         PlanName: req.body.PlanName,
