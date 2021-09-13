@@ -9,6 +9,7 @@ Plan.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
+      autoIncrement: true,
     },
     PlanName: {
       type: DataTypes.STRING,
@@ -16,7 +17,7 @@ Plan.init(
     },
     creator: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     guest: {
       type: DataTypes.STRING,

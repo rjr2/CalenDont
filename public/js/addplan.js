@@ -23,7 +23,7 @@ const addPlanHandler = async (event) => {
 }
 
 document
-  .querySelector('.eplan-form')
+  .querySelector('.plan-form')
   .addEventListener('submit', addPlanHandler);
 
 
