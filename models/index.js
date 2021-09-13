@@ -1,5 +1,5 @@
 const User = require('./User');
-const Plans = require('./plan')
+const Plan = require('./Plan')
 
 // User.hasMany(Plans, {
 //     foreignKey: 'user_id',
@@ -9,5 +9,5 @@ const Plans = require('./plan')
 //     foreignKey: 'user_id',
 // })
 
-module.exports = { User } 
-module.exports = { Plans };
+module.exports = { User, Plan } 
+
