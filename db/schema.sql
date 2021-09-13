@@ -11,8 +11,8 @@ USE calendont_db;
 --   user_password VARCHAR(12) NOT NULL
 -- );
 
--- CREATE TABLE event (
---   event_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+-- CREATE TABLE plan (
+--   plan_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 --   title VARCHAR(30) NOT NULL,
 --   schedule DATE NOT NULL, 
 --   details VARCHAR(30),

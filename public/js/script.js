@@ -1,26 +1,26 @@
-function toggleEventDisplay() {
-    var myEvents = document.getElementById('event-cards');
-    var eventDisplayButton = document.getElementById('event-display-button');
-    var displaySetting = myEvents.style.display;
+function togglePlanDisplay() {
+    var myPlans = document.getElementById('plan-cards');
+    var planDisplayButton = document.getElementById('plan-display-button');
+    var displaySetting = myPlans.style.display;
 
     if (displaySetting == 'block') {
-      myEvents.style.display = 'none';
-      eventDisplayButton.innerHTML = 'View Your Events';
+      myPlans.style.display = 'none';
+      planDisplayButton.innerHTML = 'View Your Plans';
     }
     else {
-      myEvents.style.display = 'block';
-      eventDisplayButton.innerHTML = 'Hide Your Events';
+      myPlans.style.display = 'block';
+      planDisplayButton.innerHTML = 'Hide Your Plans';
     }
   }
 
-  function toggleEventForm() {
-    var myForm = document.getElementById('event-form');
+  function togglePlanForm() {
+    var myForm = document.getElementById('plan-form');
     var formDisplayButton = document.getElementById('form-display-button');
     var displaySetting = myForm.style.display;
 
     if (displaySetting == 'block') {
       myForm.style.display = 'none';
-      formDisplayButton.innerHTML = 'Add New Event';
+      formDisplayButton.innerHTML = 'Add New Plan';
     }
     else {
       myForm.style.display = 'block';
@@ -28,8 +28,8 @@ function toggleEventDisplay() {
     }
   }
 
-  function clearEventInput(){
-    document.getElementById('addEventName').value = '';
-    document.getElementById('addEventParticipant').value = '';
+  function clearPlanInput(){
+    document.getElementById('addPlanName').value = '';
+    document.getElementById('addPlanParticipant').value = '';
     document.getElementById('selectDateTime').value = '';
   }

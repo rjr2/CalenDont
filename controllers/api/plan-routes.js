@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { Events } =require('../../models');
+const { Plans } =require('../../models');
 
 
-//CREATE new event
-router.post('/api/event', async (req, res) => {
+//CREATE new plan
+router.post('/api/plan', async (req, res) => {
     try {
-      const dbEventData = await Events.create({
-        Eventname: req.body.Eventname,
+      const dbPlanData = await Plans.create({
+        PlanName: req.body.PlanName,
         guest: req.body.guest,
         schedule: req.body.schedule,
       });
@@ -14,7 +14,7 @@ router.post('/api/event', async (req, res) => {
       req.session.save(() => {
         req.session.loggedIn = true;
   
-        res.status(200).json(dbEventData);
+        res.status(200).json(dbPlanData);
       });
     } catch (err) {
       console.log(err);
