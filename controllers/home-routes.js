@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { UserID, Plans } = require('../models');
+const { UserID, Plan } = require('../models');
 const withAuth = require('../utils/auth')
 
 router.get('/', withAuth, async (req, res) => {
@@ -20,7 +20,7 @@ router.get('/', withAuth, async (req, res) => {
   //  );
 
     res.render('homepage', {
-      Plans,
+      Plan,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -42,10 +42,10 @@ router.get('/plan/:id', async (req, res) => {
   } else {
     // If the user is logged in, allow them to view the gallery
     try {
-      const dbPlans = await plans.findByPk(req.params.id, {
+      const dbPlans = await Plan.findByPk(req.params.id, {
         include: [
           {
-            model: Plans,
+            model: Plan,
             attributes: [
               'id',
               'title',
