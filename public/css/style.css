@@ -1,23 +1,15 @@
 body {
-background-color: #1368aa;
+background-color: #03396c!important;
   text-align: center;
-  background-image: url(rain-drops-seamless-pattern-background-vector-20437511.png);
-  background-size: cover;
+  /* background-image: url(rain-drops-seamless-pattern-background-vector-20437511.png); */
+  /* background-size: cover;
   background-position: center;
-  background-repeat: repeat;
+  background-repeat: repeat; */
   max-height: 100%;
   width: 100%;
 }
 
-.nav-link a {
-  color: #ffb703;
-  font-weight: bold;
-}
 
-.navbar a:hover {
-  color: #fb8500;
-  font-weight: bold;
-}
 
 .row {
   align-items: center;
@@ -34,9 +26,9 @@ background-color: #1368aa;
   /* flex: 0 0 50%;
   max-width: 50%; */
   padding: 5px;
-  border-radius: 50px;
+  /* border-radius: 50px;
   box-shadow: 0 2px 3px 5px rgba(0,0,0,.6);
-  background-color: #9dcee2;
+  background-color: #9dcee2; */
   color: black;
 }
 
@@ -67,23 +59,25 @@ background-color: #1368aa;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #90cbdb; 
+    /* background-color: #90cbdb;  */
+    background-color: #b3cde0;
     opacity: .95;
     margin: 20px;
-    border-radius: 50px;
-    box-shadow: 0 2px 3px 5px rgba(0,0,0,.6);
+    /* border-radius: 50px;
+    box-shadow: 0 2px 3px 5px rgba(0,0,0,.6); */
     }
   
 
   #sidebar {
     font-family: 'Urbanist';
-    background-color: #4a4085;
+    background-color: #005b96;
     opacity: .95;
     margin: 20px;
     padding: 20px;
-    border-radius: 50px;
+    /* border-radius: 50px;
     border: 2px solid black;
     box-shadow: 0 1px 2px 3px rgba(0,0,0,.6);
+   */
   }
 
   #main {
@@ -91,8 +85,9 @@ background-color: #1368aa;
     background-color: #CAE6EE; opacity: .95; 
     margin: 20px;
     padding: 20px;
-    border-radius: 50px;
+    /* border-radius: 50px;
     box-shadow: 0 2px 3px 5px rgba(0,0,0,.6);
+   */
   }
 
   .logo {
@@ -112,9 +107,10 @@ background-color: #1368aa;
 }
 
 .card {
-  border-radius: 50px;
+  /* border-radius: 50px; */
   margin: 20px;
-  box-shadow: 0 1px 1px 1px rgba(0,0,0,.6);
+  /* box-shadow: 0 1px 1px 1px rgba(0,0,0,.6);
+*/
 }
   
 #plan-form {
@@ -122,8 +118,8 @@ background-color: #1368aa;
   opacity: .95;
   margin: 40px;
   padding: 20px;
-  border-radius: 50px;
-  box-shadow: 0 2px 3px 5px rgba(0,0,0,.6);
+  /* border-radius: 50px;
+  box-shadow: 0 2px 3px 5px rgba(0,0,0,.6); */
   display: none;
 }
 
