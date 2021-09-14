@@ -23,7 +23,7 @@ const addPlanHandler = async (event) => {
   }
 };
 
-const addPlanHandler = async (event) => {
+const getPlanHandler = async (event) => {
   console.log('straight cheez boyz')
   event.preventDefault();
 
@@ -52,6 +52,6 @@ const addPlanHandler = async (event) => {
 
 document
   .querySelector('.plan-form')
-  .addEventListener('submit', addPlanHandler);
+  .addEventListener('submit', addPlanHandler, getPlanHandler);
 
 
