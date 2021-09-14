@@ -10,7 +10,7 @@ const addPlanHandler = async (event) => {
   if (guest && PlanName && schedule && creator) {
     const response = await fetch('/api/plan', {
       method: 'POST',
-      body: JSON.stringify({ guest, PlanName, schedule }),
+      body: JSON.stringify({ guest, PlanName, schedule, creator }),
       headers: { 'Content-Type': 'application/json' },
     });
 
