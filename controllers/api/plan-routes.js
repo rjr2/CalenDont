@@ -7,6 +7,7 @@ router.post('/', async (req, res) => {
     try {
       const dbPlanData = await Plan.create({
         PlanName: req.body.PlanName,
+        creator: req.body.creator,
         guest: req.body.guest,
         schedule: req.body.schedule,
       });
