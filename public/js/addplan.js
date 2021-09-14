@@ -5,8 +5,9 @@ const addPlanHandler = async (event) => {
   const guest = document.querySelector('#addPlanParticipant').value.trim();
   const PlanName = document.querySelector('#addPlanName').value.trim();
   const schedule = document.querySelector('#addDateTime').value.trim();
+  const creator = document.querySelector('#addCreator').value.trim();
 
-  if (guest && PlanName && schedule) {
+  if (guest && PlanName && schedule && creator) {
     const response = await fetch('/api/plan', {
       method: 'POST',
       body: JSON.stringify({ guest, PlanName, schedule }),
