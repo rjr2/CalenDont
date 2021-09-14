@@ -36,7 +36,7 @@ const addPlanHandler = async (event) => {
   if (guest && PlanName && schedule && creator) {
     const response = await fetch('/api/plan', {
       method: 'GET',
-      body: JSON.stringify({ guest, PlanName, schedule, creator }),
+      body: JSON.stringify({ cardTitle1, cardCreator, cardGuest, cardStatus }),
       headers: { 'Content-Type': 'application/json' },
     });
 
