@@ -33,7 +33,7 @@ const getPlanHandler = async (event) => {
   const cardStatus = document.querySelector('#status1');
 
 
-  if (guest && PlanName && schedule && creator) {
+  if (cardTitle1 && cardCreator && cardGuest && cardStatus) {
     const response = await fetch('/api/plan', {
       method: 'GET',
       body: JSON.stringify({ cardTitle1, cardCreator, cardGuest, cardStatus }),
