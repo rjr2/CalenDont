@@ -21,5 +21,15 @@ router.post('/', async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+  router.get('/', async (req, res) => {
+    const planData = await Plan.findAll().catch((err) => {
+      res.json(err);
+    })
+    const plans = planData.map((plan) => plan.get({ plain: true }));
+    res.render('main', { plans });
+  });
+  
+    
   
   module.exports = router;
