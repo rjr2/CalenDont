@@ -27,7 +27,7 @@ router.post('/', async (req, res) => {
       res.json(err);
     })
     const plans = planData.map((plan) => plan.get({ plain: true }));
-    res.render('main', { plans });
+    res.status(200).json(planData);
   });
   
     
