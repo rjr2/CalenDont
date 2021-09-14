@@ -21,7 +21,34 @@ const addPlanHandler = async (event) => {
       alert('Failed to add plan.');
     }
   }
-}
+};
+
+const addPlanHandler = async (event) => {
+  console.log('straight cheez boyz')
+  event.preventDefault();
+
+  const cardTitle1 = document.querySelector('#title1');
+  const cardCreator = document.querySelector('#creator1');
+  const cardGuest = document.querySelector('#guest1');
+  const cardStatus = document.querySelector('#status1');
+
+
+  if (guest && PlanName && schedule && creator) {
+    const response = await fetch('/api/plan', {
+      method: 'GET',
+      body: JSON.stringify({ guest, PlanName, schedule, creator }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      console.log("success")
+      document.location.replace('/');
+    } else {
+      alert('Failed to show plan.');
+    }
+  }
+};
+
 
 document
   .querySelector('.plan-form')
