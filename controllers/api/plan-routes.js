@@ -1,13 +1,14 @@
 const router = require('express').Router();
-const { Plan } =require('../../models');
+const { Plan, User } =require('../../models');
 
 
 //CREATE new plan
 router.post('/', async (req, res) => {
+  console.log(User)
     try {
       const dbPlanData = await Plan.create({
         PlanName: req.body.PlanName,
-        creator: req.body.creator,
+        creator: User.id,
         guest: req.body.guest,
         schedule: req.body.schedule,
       });
