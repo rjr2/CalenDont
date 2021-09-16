@@ -1,5 +1,4 @@
 const addPlanHandler = async (event) => {
-  console.log("why tho?")
   event.preventDefault();
 
   const guest = document.querySelector('#addPlanParticipant').value.trim();

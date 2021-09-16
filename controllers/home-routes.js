@@ -6,21 +6,14 @@ const withAuth = require('../utils/auth')
 router.get('/', withAuth, async (req, res) => {
 
   try {
-  //   const dbPlans = await Plans.findAll({
-  //     include: [
-  //       {
-  //         model: Plans,
-  //         attributes: ['date', 'time', 'title'],
-  //       },
-  //     ],
-  // });
+    const dbPlans = await Plan.findAll();
 
-  //  const plans = dbPlans.map((plan) =>
-  //     plan.get({ plain: true })
-  //  );
+   const plans = dbPlans.map((plan) =>
+      plan.get({ plain: true })
+   );
 
     res.render('homepage', {
-      Plan,
+      plans,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {

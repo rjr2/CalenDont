@@ -17,7 +17,8 @@ Plan.init(
     },
     creator: {
       type: DataTypes.STRING,
-      allowNull: false,
+      defaultValue: 0,
+      // allowNull: false,
     },
     guest: {
       type: DataTypes.STRING,
