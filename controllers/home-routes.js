@@ -39,8 +39,16 @@ router.get("/home", withAuth, async (req, res) => {
 //   res.render('about');
 // })
 
+
+
+router.get('/plan/:id', async (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+  } else {
+
 router.get("/plan/:id", withAuth, async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
+
 
     try {
       const dbPlans = await Plan.findByPk(req.params.id, {
@@ -79,5 +87,7 @@ router.get("/login", (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
 
 module.exports = router;
