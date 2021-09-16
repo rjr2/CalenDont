@@ -4,20 +4,17 @@ const { Plan, User } =require('../../models');
 
 //CREATE new plan
 router.post('/', async (req, res) => {
-  console.log(User)
+  console.log(req.body)
     try {
       const dbPlanData = await Plan.create({
         PlanName: req.body.PlanName,
-        creator: User.id,
+        creator: req.session.id,
         guest: req.body.guest,
         schedule: req.body.schedule,
-      });
-  
-      req.session.save(() => {
-        req.session.loggedIn = true;
+      })
   
         res.status(200).json(dbPlanData);
-      });
+      
     } catch (err) {
       console.log(err);
       res.status(500).json(err);

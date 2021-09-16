@@ -39,12 +39,9 @@ router.get("/home", withAuth, async (req, res) => {
 //   res.render('about');
 // })
 
-router.get("/plan/:id", async (req, res) => {
+router.get("/plan/:id", withAuth, async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
-  if (!req.session.loggedIn) {
-    res.redirect("/login");
-  } else {
-    // If the user is logged in, allow them to view the gallery
+
     try {
       const dbPlans = await Plan.findByPk(req.params.id, {
         include: [
@@ -68,7 +65,6 @@ router.get("/plan/:id", async (req, res) => {
       console.log(err);
       res.status(500).json(err);
     }
-  }
 });
 
 router.get("/login", (req, res) => {
