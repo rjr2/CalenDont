@@ -1,7 +1,29 @@
 <div class="row" id="plan-cards">
-  <div class="col-sm-4">
+{{#each plans as |plan|}}
+<div class="col-sm-4">
+    <div class="card">
+        <a href="/plan/{{plan.id}}">
+            <div class="card-body">
+                <h4 class="card-title" id="title1">{{plan.PlanName}}</h4>
+                <p class="participants" id="creator1">{{plan.creator}}</p>
+                <p class="participants" id="guest1">{{plan.guest}}</p>
+                <p class="schedule" id="schedule1">{{plan.schedule}}</p>
+                <h5 class="status" id="status1">Status</h5>
+                <a href="#" class="btn btn-primary" id="cancel-button">Not feeling it?</a>
+            </div>
+        </a>
+    </div>
+</div>
+{{/each}}
+
+
+  {{!-- <div class="col-sm-4">
     <div class="card">
       <div class="card-body">
+
+
+
+
         <h4 class="card-title" id="title1" >Plan Title</h4>
         <p class="participants" id="creator1">Plan Creator</p>
         <p class="participants" id="guest1">Guest</p>
@@ -33,8 +55,8 @@
         <a href="#" class="btn btn-primary" id="cancel-button">Not feeling it?</a>
       </div>
     </div>
-  </div>
-</div>
+  </div> --}}
+</div> 
 
 <div class="row">
   <div class="col-sm-4 view-add-buttons">
