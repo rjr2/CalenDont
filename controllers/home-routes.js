@@ -1,34 +1,32 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-const { UserID, Plan } = require('../models');
-const withAuth = require('../utils/auth')
+const { UserID, Plan } = require("../models");
+const withAuth = require("../utils/auth");
 
-router.get('/', (req, res) => {
-  try{
-  res.render('login')
-  } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-      }
-})
-router.get('/home', withAuth, async (req, res) => {
-
+router.get("/", (req, res) => {
   try {
-//   //   const dbPlans = await Plans.findAll({
-//   //     include: [
-//   //       {
-//   //         model: Plans,
-//   //         attributes: ['date', 'time', 'title'],
-//   //       },
-//   //     ],
-//   // });
+    res.render("login");
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+router.get("/home", withAuth, async (req, res) => {
+  try {
+    //   //   const dbPlans = await Plans.findAll({
+    //   //     include: [
+    //   //       {
+    //   //         model: Plans,
+    //   //         attributes: ['date', 'time', 'title'],
+    //   //       },
+    //   //     ],
+    //   // });
 
-//   //  const plans = dbPlans.map((plan) =>
-//   //     plan.get({ plain: true })
-//   //  );
+    //   //  const plans = dbPlans.map((plan) =>
+    //   //     plan.get({ plain: true })
+    //   //  );
 
-    res.render('homepage', {
-      
+    res.render("homepage", {
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -37,16 +35,14 @@ router.get('/home', withAuth, async (req, res) => {
   }
 });
 
-
 // router.get('/about', (res) => {
 //   res.render('about');
 // })
 
-
-router.get('/plan/:id', async (req, res) => {
+router.get("/plan/:id", async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
   if (!req.session.loggedIn) {
-    res.redirect('/login');
+    res.redirect("/login");
   } else {
     // If the user is logged in, allow them to view the gallery
     try {
@@ -55,19 +51,19 @@ router.get('/plan/:id', async (req, res) => {
           {
             model: Plan,
             attributes: [
-              'id',
-              'title',
-              'date',
-              'time',
-              'attendees',
-              'details',
-              'cancelled'
+              "id",
+              "title",
+              "date",
+              "time",
+              "attendees",
+              "details",
+              "cancelled",
             ],
           },
         ],
       });
       const plan = dbPlans.get({ plain: true });
-      res.render('plan', { plan, loggedIn: req.session.loggedIn });
+      res.render("plan", { plan, loggedIn: req.session.loggedIn });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
@@ -75,13 +71,17 @@ router.get('/plan/:id', async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
+router.get("/login", (req, res) => {
+  try {
+    if (req.session.loggedIn) {
+      res.redirect("/home");
+      return;
+    }
+    res.render("login");
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
   }
-
-  res.render('login');
 });
 
 module.exports = router;
