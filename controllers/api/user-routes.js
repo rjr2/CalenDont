@@ -51,10 +51,12 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-      req.session.username = username
+      req.session.username = dbUserData.username;
+      req.session.id = dbUserData.id;
       res
         .status(200)
-        .json({ user: dbUserData, message: 'You are now logged in!' });
+        .json({ user: dbUserData, message: 'You are now logged in!' })
+        // .redirect("/home");
     });
   } catch (err) {
     console.log(err);

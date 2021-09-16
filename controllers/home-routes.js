@@ -3,17 +3,32 @@ const router = require('express').Router();
 const { UserID, Plan } = require('../models');
 const withAuth = require('../utils/auth')
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', (req, res) => {
+  try{
+  res.render('login')
+  } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
+})
+router.get('/home', withAuth, async (req, res) => {
 
   try {
-    const dbPlans = await Plan.findAll();
+//   //   const dbPlans = await Plans.findAll({
+//   //     include: [
+//   //       {
+//   //         model: Plans,
+//   //         attributes: ['date', 'time', 'title'],
+//   //       },
+//   //     ],
+//   // });
 
-   const plans = dbPlans.map((plan) =>
-      plan.get({ plain: true })
-   );
+//   //  const plans = dbPlans.map((plan) =>
+//   //     plan.get({ plain: true })
+//   //  );
 
     res.render('homepage', {
-      plans,
+      
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -23,9 +38,9 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 
-router.get('/about', (res) => {
-  res.render('about');
-})
+// router.get('/about', (res) => {
+//   res.render('about');
+// })
 
 
 router.get('/plan/:id', async (req, res) => {
