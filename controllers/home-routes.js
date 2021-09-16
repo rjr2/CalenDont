@@ -23,17 +23,11 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 
-router.get('/about', (res) => {
-  res.render('about');
-})
-
 
 router.get('/plan/:id', async (req, res) => {
-  // If the user is not logged in, redirect the user to the login page
   if (!req.session.loggedIn) {
     res.redirect('/login');
   } else {
-    // If the user is logged in, allow them to view the gallery
     try {
       const dbPlans = await Plan.findByPk(req.params.id, {
         include: [
@@ -68,5 +62,17 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+
+router.get('/about', (req, res) => {
+  // TODO: Add a comment describing the functionality of this if statement
+  if (req.session.logged_in) {
+    res.render('about');
+    return;
+  }
+});
+
+
+
 
 module.exports = router;

@@ -1,62 +1,20 @@
-<div class="row" id="plan-cards">
-{{#each plans as |plan|}}
-<div class="col-sm-4">
+<div class="row" >
+  {{#each plans as |plan|}}
+  <div class="col-sm-4" id="plan-cards">
     <div class="card">
-        <a href="/plan/{{plan.id}}">
-            <div class="card-body">
-                <h4 class="card-title" id="title1">{{plan.PlanName}}</h4>
-                <p class="participants" id="creator1">{{plan.creator}}</p>
-                <p class="participants" id="guest1">{{plan.guest}}</p>
-                <p class="schedule" id="schedule1">{{plan.schedule}}</p>
-                <h5 class="status" id="status1">Status</h5>
-                <a href="#" class="btn btn-primary" id="cancel-button">Not feeling it?</a>
-            </div>
-        </a>
+      <a href="/plan/{{plan.id}}">
+        <div class="card-body">
+          <h4 class="card-title" id="title1"> <b>Event:</b> {{plan.PlanName}}</h4>
+          <p class="participants" id="creator1"><b>With:</b> {{plan.creator}}, {{plan.guest}}</p>
+          <p class="schedule" id="schedule1"><b>When:</b> {{plan.schedule}}</p>
+          <h5 class="status" id="status1">It's on!</h5>
+          <a href="#" class="btn btn-primary" id="cancel-button">Not feeling it?</a>
+        </div>
+      </a>
     </div>
+  </div>
+  {{/each}}
 </div>
-{{/each}}
-
-
-  {{!-- <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-
-
-
-
-        <h4 class="card-title" id="title1" >Plan Title</h4>
-        <p class="participants" id="creator1">Plan Creator</p>
-        <p class="participants" id="guest1">Guest</p>
-        <h5 class="status" id="status1">Status</h5>
-        <a href="#" class="btn btn-primary" id="cancel-button">Not feeling it?</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title" id="title2">Plan Title</h4>
-        <p class="participants" id="creator2">Plan Creator</p>
-        <p class="participants" id="guest2">Guest</p>
-        <h5 class="status" id="status2">Status</h5>
-        <a href="#" class="btn btn-primary" id="cancel-button">Not feeling it?</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title" id="title3">Plan Title</h4>
-        <p class="participants" id="creator3">Plan Creator</p>
-        <p class="participants" id="guest3">Guest</p>
-        <h5 class="status" id="status3">Status</h5>
-        <a href="#" class="btn btn-primary" id="cancel-button">Not feeling it?</a>
-      </div>
-    </div>
-  </div> --}}
-</div> 
 
 <div class="row">
   <div class="col-sm-4 view-add-buttons">
@@ -72,7 +30,7 @@
 
 
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-6" id="plan-form">
     <form class="form plan-form">
       <div class="form-group">
         <label for="addCreator">Please enter your username.</label>

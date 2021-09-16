@@ -13,7 +13,7 @@ background-color: #03396c!important;
 
 .row {
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-around!important;
 }
 
 .login-signup {
@@ -129,4 +129,8 @@ background-color: #03396c!important;
 
 .view-add-buttons{
   margin: 20px;
+}
+
+#status1 {
+  color: green;
 }
