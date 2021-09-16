@@ -40,12 +40,6 @@ router.get("/home", withAuth, async (req, res) => {
 // })
 
 
-
-router.get('/plan/:id', async (req, res) => {
-  if (!req.session.loggedIn) {
-    res.redirect('/login');
-  } else {
-
 router.get("/plan/:id", withAuth, async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
 
