@@ -38,7 +38,9 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         console.log("success")
-        document.location.replace('/');
+        document.location.replace('/login');
+        alert('Account created! Logging in now.')
+
       } else {
         alert('Failed to sign up.');
       }
