@@ -47,5 +47,26 @@ router.post('/', async (req, res) => {
     }
   });
     
+
+  router.delete('/:id', async (req, res) => {
+    // delete a category by its `id` value
+    try {
+      const planData = await Plan.destroy({
+        where: {
+          id: req.params.id,
+        },
+      });
+  
+      if (!planData) {
+        res.status(404).json({ message: 'No plan found with that id!' });
+        return;
+      }
+  
+      res.status(200).json(planData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
   
   module.exports = router;
