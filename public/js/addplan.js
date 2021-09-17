@@ -15,7 +15,7 @@ const addPlanHandler = async (event) => {
 
     if (response.ok) {
       console.log("success")
-      document.location.replace('/');
+      document.location.replace('/home');
     } else {
       alert('Failed to add plan.');
     }
