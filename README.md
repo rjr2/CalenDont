@@ -4,6 +4,10 @@
 
 A quick application that allows users to create an account, and then make plans and invite a friend who also has account. Our easy user interface allows someone who is invited to an event to anonymously decline. If BOTH attendees decline the event it will be cancelled.
 
+Calendont is deployed on [Heroku](https://pacific-badlands-48977.herokuapp.com/).
+
+The source code can be found on [GitHub](https://github.com/rjr2/CalenDont).
+
 Calendont uses JavaScript, Sequilize, Bootstrap, HandleBars, Express, MaxCDN, and MySQL.
 
 ## Credits
